@@ -27,5 +27,6 @@ jobs:
             fi
             git fetch origin
             git checkout ${{ github.ref_name }}
+            export PATH=$PATH:/www/server/nodejs/v24.14.1/bin
             npm ci --production
             pm2 restart api-service || pm2 start index.js --name api-service
