@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/health', (req, res) => {//test4
+app.get('/health', (req, res) => {//test5
   res.json({ status: 'ok', version: process.env.VERSION || 'dev' });
 });
 
